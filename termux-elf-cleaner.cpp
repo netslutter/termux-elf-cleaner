@@ -21,7 +21,12 @@
 #define DF_1_NODELETE	0x00000008	/* Set RTLD_NODELETE for this object.*/
 
 // The supported DT_FLAGS_1 values as of Android 6.0.
-#define SUPPORTED_DT_FLAGS_1 (DF_1_NOW | DF_1_GLOBAL | DF_1_NODELETE)
+/*#define SUPPORTED_DT_FLAGS_1 (DF_1_NOW | DF_1_GLOBAL | DF_1_NODELETE)*/
+/* As of Android 5.x DF_1_NODELETE is not supported by linker. This causes warnings. Since this fork of 'termux-elf-cleaner' 
+   is particularly for Android 5.x, exclude DF_1_NODELETE from SUPPORTED_DT_FLAGS_1. Thus avoiding linker warnings of
+   "WARNING: linker: Unsupported flags DT_FLAGS_1=0x8".
+   */
+#define SUPPORTED_DT_FLAGS_1 (DF_1_NOW | DF_1_GLOBAL)
 
 template<typename ElfHeaderType /*Elf{32,64}_Ehdr*/,
 	 typename ElfSectionHeaderType /*Elf{32,64}_Shdr*/,
