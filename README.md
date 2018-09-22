@@ -15,13 +15,13 @@ When loading ELF files, the Android linker warns about unsupported dynamic secti
 This utility strips away the following dynamic section entries:
 
 - `DT_RPATH` ------ not supported in any Android version.
-- `DT_RUNPATH` ---- supported from Android 7.0.
-- `DT_VERDEF` ----- supported from Android 6.0.
+- `DT_RUNPATH` ----- supported from Android 7.0.
+- `DT_VERDEF` ------ supported from Android 6.0.
 - `DT_VERDEFNUM` -- supported from Android 6.0.
 - `DT_VERNEEDED`--- supported from Android 6.0.
 - `DT_VERNEEDNUM`-- supported from Android 6.0.
-- `DT_VERSYM` ----- supported from Android 6.0.
-- `DT_GNU_HASH` --- causes warnings in Android 5.x
+- `DT_VERSYM` ------ supported from Android 6.0.
+- `DT_GNU_HASH` ---- causes warnings in Android 5.x
 - `DF_1_NODELETE`-- supported from Android 6.0. Causes warnings in Android 5.x.
 
 It also removes the three ELF sections of type:
