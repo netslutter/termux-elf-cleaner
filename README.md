@@ -4,7 +4,7 @@ Utility for Android ELF files to remove unused parts that the linker warns about
 <h1><b>WARNING: This repo is strictly for Android 5.x</b></h1>
 This repo is targated for Android 5.x , hence it removes dynamic section entries that are not supported in Android 5.x.
 Some of which are supported/may be required in Android 6.0 and later versions. So it is advised not to use this tool
-IF you are running Android version higher than 5.x.
+IF you are running Android version 6.0 or higher.
 
 # Description
 When loading ELF files, the Android linker warns about unsupported dynamic section entries with warnings such as:
